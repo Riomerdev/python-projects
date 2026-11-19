@@ -1,0 +1,4 @@
+order_id,customer_email,units,unit_price,ordered_on
+SO-1001,ana@example.test,3,19.90,2026-10-05
+SO-1002,bruno@example.test,2,free,2026-10-06
+SO-1003,carla@example.test,0,7.50,2026-10-07

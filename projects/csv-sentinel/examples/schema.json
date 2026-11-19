@@ -1,0 +1,12 @@
+{
+  "required": ["order_id", "customer_email", "units", "unit_price"],
+  "types": {
+    "units": "integer",
+    "unit_price": "decimal",
+    "ordered_on": "date"
+  },
+  "minimums": {
+    "units": 1,
+    "unit_price": 0
+  }
+}

@@ -1,0 +1,4 @@
+{"timestamp":"2026-11-01T10:15:00Z","service":"checkout","level":"ERROR","error_code":"PAYMENT_TIMEOUT","message":"payment provider timed out"}
+{"timestamp":"2026-11-01T10:15:08Z","service":"checkout","level":"ERROR","error_code":"PAYMENT_TIMEOUT","message":"payment provider timed out"}
+{"timestamp":"2026-11-01T10:16:02Z","service":"catalog","level":"WARN","error_code":"CACHE_MISS","message":"product cache miss"}
+{"timestamp":"2026-11-01T10:17:31Z","service":"checkout","level":"ERROR","error_code":"PAYMENT_DECLINED","message":"payment declined by issuer"}
