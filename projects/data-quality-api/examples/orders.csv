@@ -1,0 +1,5 @@
+external_id,sku,quantity,unit_price
+SO-1001,BR-SENSOR-1,4,29.90
+SO-1002,EU-MODULE-2,2,115.00
+SO-1003,BAD SKU,0,not-a-price
+SO-1001,US-GATEWAY,1,89.50

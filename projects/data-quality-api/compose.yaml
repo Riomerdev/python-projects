@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: data_quality
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your local .env file}
+    ports: ["5434:5432"]
+    volumes:
+      - quality-db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portfolio -d data_quality"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://portfolio:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your local .env file}@db:5432/data_quality
+      LOG_LEVEL: INFO
+    ports: ["8000:8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  quality-db:
